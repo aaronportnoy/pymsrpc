@@ -36,8 +36,7 @@ opnum = False
 
 if len(sys.argv) > 2:
     host = sys.argv[2]
-    port = 445
-    pipe = sys.argv[3]
+    port = int(sys.argv[3])
 
     if len(sys.argv) == 5:
         opnum = int(sys.argv[4])
@@ -148,6 +147,8 @@ for uuid in idl:
         
         # This is all you do to serialize the data for the wire    
         request += opcode.serialize()
+        
+        print "%s" % print_hex(request)
         
         print "[*] Sending [%d]" % (opcode.opnum)
         print "[*] [%s]" % print_hex(request)
