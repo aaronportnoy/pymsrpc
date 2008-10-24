@@ -83,7 +83,7 @@ def lexify():
     end_comment                     = Str("*/")
     opnum                           = Str("opcode: 0x") + Rep1(letter | digit)
     opcode_address                  = Str("address: 0x") + Rep1(letter | digit)
-    opcode_sub                      = (Str("long ") | Str("void ") | Str("error_status_t ")) + Rep1(Any("_ ") | digit | letter) + Str(" ")
+    opcode_sub                      = (Str("long ") | Str("short ") | Str("small ") | Str("void ") | Str("error_status_t ")) + Rep1(Any("_ ") | digit | letter) + Str(" ")
     #opcode_symbol_sub              = AnyBut("sub") + Rep(Any("_") | letter | digit) + Str("(")
 
     # Opcode elements
