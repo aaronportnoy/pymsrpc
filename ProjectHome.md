@@ -1,0 +1,1 @@
+pymsrpc is an attempt to develop a working library for communicating with remote Microsoft RPC endpoints.  It includes an IDL parser and NDR data types for making requests.
